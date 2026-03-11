@@ -1,4 +1,4 @@
-/* ── LOADER ── */
+/* ── LOADER  ── */
 document.body.classList.add('loading');
 const loader = document.getElementById('loader');
 let fontsReady = false, timeReady = false;
