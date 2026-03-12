@@ -505,7 +505,8 @@
     /* RESPONSIVE TABLET */
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 7rem; }
-      .hero-visual { display: none; }
+      .hero-visual { display: flex; justify-content: center; }
+      .hero-float-card { max-width: 100%; }
       .why { grid-template-columns: 1fr; gap: 3rem; }
       .nav-links { display: none; }
     }
@@ -516,12 +517,27 @@
       nav { padding: .9rem 4vw; }
       .nav-btn { font-size: .75rem; padding: .45rem 1rem; }
 
-      /* HERO */
-      .hero { padding: 6.5rem 5vw 4rem; min-height: auto; }
-      .hero h1 { font-size: 2.1rem; }
-      .hero-sub { font-size: .95rem; }
+      /* HERO — card horizontal di mobile */
+      .hero { grid-template-columns: 1fr; padding: 6rem 4vw 3rem; min-height: auto; gap: 1.5rem; }
+      .hero h1 { font-size: 2rem; margin-bottom: 1rem; }
+      .hero-sub { font-size: .9rem; margin-bottom: 1.5rem; }
       .hero-actions { flex-direction: column; }
       .hero-actions a { text-align: center; padding: .9rem 1.5rem; font-size: .95rem; }
+      .hero-visual { display: flex; justify-content: center; }
+      .hero-float-card {
+        display: flex; flex-direction: row;
+        gap: .8rem; padding: .9rem 1rem;
+        max-width: 100%; align-items: center;
+      }
+      .hfc-row { flex-direction: column; gap: .3rem; margin-bottom: 0; flex-shrink: 0; }
+      .hfc-dot { width: 24px; height: 24px; }
+      .hfc-label { display: none; }
+      .hfc-stat-row { margin-bottom: 0; gap: .35rem; }
+      .hfc-stat { padding: .45rem .35rem; }
+      .hfc-num { font-size: .95rem; }
+      .hfc-sub { font-size: .58rem; }
+      .hfc-msg { flex: 1; gap: .35rem; }
+      .hfc-bubble { font-size: .7rem; padding: .4rem .65rem; }
 
       /* SECTIONS */
       section { padding: 4rem 5vw; }
@@ -745,6 +761,12 @@
     display: flex; align-items: center; gap: .4rem;
   }
   .pnb-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+
+  /* ── PRICING 2 COLUMNS ── */
+  .pricing-grid-2 { grid-template-columns: repeat(2, 1fr) !important; max-width: 700px; }
+  @media (max-width: 600px) {
+    .pricing-grid-2 { grid-template-columns: 1fr !important; max-width: 400px; }
+  }
 
   /* ── E-COMMERCE CHAT CARDS ── */
   .ec-grid {
