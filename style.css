@@ -355,7 +355,19 @@
     .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 3rem; }
     .platform-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem 1.2rem; text-align: center; transition: border-color .2s, transform .2s; }
     .platform-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .picon { font-size: 2rem; margin-bottom: .8rem; }
+    .picon {
+      font-size: 2rem; margin-bottom: .8rem;
+      width: 56px; height: 56px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .picon svg { width: 30px; height: 30px; }
+    /* Platform icon colors */
+    .platform-card:nth-child(1) .picon { background: #25d366; }
+    .platform-card:nth-child(2) .picon { background: #1877f2; }
+    .platform-card:nth-child(3) .picon { background: #2CA5E0; }
+    .platform-card:nth-child(4) .picon { background: #5865f2; }
+    .platform-card:nth-child(5) .picon { background: #ee4d2d; }
+    .platform-card:nth-child(6) .picon { background: #1a6b3c; }
     .platform-card h4 { font-family: 'Bricolage Grotesque', sans-serif; font-size: .9rem; font-weight: 700; margin-bottom: .3rem; }
     .platform-card p { font-size: .75rem; color: var(--muted); }
 
